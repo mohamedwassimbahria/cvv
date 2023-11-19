@@ -1,0 +1,59 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact - Votre Nom</title>
+</head>
+<body>
+
+    <header>
+        <li><a href="index.html">Accueil</a></li>
+            <li><a href="education.html">Éducation</a></li>
+            <li><a href="experience.html">Expérience</a></li>
+            <li><a href="skills.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+    
+    </header>
+<hr>
+    <nav>
+        <ul>
+        <h1> Bahria Lasgher Mohamed Wassim<br>Ingénieur Informatique</h1> 
+        </ul>
+    </nav>
+
+    <section id="content"> 
+        <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <p>
+                <strong>Téléphone :</strong> +216 23 439 268<br>
+                <strong>E-mail :</strong> mohamedwassim.bahrialasgher@esprit.tn<br>
+                <strong>Réseaux sociaux :</strong> <a href="https://www.linkedin.com/in/wassim-bahria-3515b3259/">LinkedIn</a>, <a href="https://www.facebook.com/wassim.bahria/">Facebook</a>
+            </p>
+        </div>
+<hr>
+        <div class="contact-form">
+            <h3>Formulaire de Contact</h3>
+            <form action="traitement_formulaire.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+<hr>
+    <footer>
+        <p>&copy; 2023 Bahria Lasgher Mohamed Wassim</p>
+    </footer>
+
+</body>
+</html>
