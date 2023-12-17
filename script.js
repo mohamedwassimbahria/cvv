@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     const nomInput = document.getElementById('nom');
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
-            event.preventDefault();
+            // Redirection vers la page d'accueil après la soumission du formulaire
             window.location.href = 'index.html';
         }
 
