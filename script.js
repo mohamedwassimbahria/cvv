@@ -29,15 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             messageError.textContent = '';
         }
-        console.log('Nom:', nomInput.value);
-        console.log('Email:', emailInput.value);
-        console.log('Message:', messageInput.value);
 
-        console.log('Validation du nom:', ValidNom(nomInput.value));
-        console.log('Validation de l\'e-mail:', ValidEmail(emailInput.value));
-        console.log('Validation du message:', ValidMessage(messageInput.value));
-    
-
+        if (isValidForm()) {
+            window.location.href = 'index.html';
+        }
     });
 
     function ValidNom(nom) {
@@ -53,7 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function ValidMessage(message) {
         return message.trim() !== '';
     }
+
+    function isValidForm() {
+        return ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value);
+    }
 });
+
 
 
 
