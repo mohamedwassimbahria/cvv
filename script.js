@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     const nomInput = document.getElementById('nom');
@@ -9,34 +10,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactForm.addEventListener('submit', function (event) {
         console.log('Formulaire soumis.');
-
-        const isNomValid = ValidNom(nomInput.value);
-        if (!isNomValid) {
+        if (!ValidNom(nomInput.value)) {
             event.preventDefault();
             nomError.textContent = 'Veuillez saisir un nom valide (lettres seulement)';
         } else {
             nomError.textContent = '';
         }
 
-        // Validation du champ de saisie de l'e-mail
-        const isEmailValid = ValidEmail(emailInput.value);
-        if (!isEmailValid) {
+        if (!ValidEmail(emailInput.value)) {
             event.preventDefault();
             emailError.textContent = 'Veuillez saisir une adresse e-mail valide';
         } else {
             emailError.textContent = '';
         }
 
-        // Validation du champ de saisie du message
-        const isMessageValid = ValidMessage(messageInput.value);
-        if (!isMessageValid) {
+        if (!ValidMessage(messageInput.value)) {
             event.preventDefault();
             messageError.textContent = 'Veuillez saisir un message';
         } else {
             messageError.textContent = '';
         }
 
-        if (isNomValid && isEmailValid && isMessageValid) {
+        // Si la validation est réussie, redirigez vers index.html
+        if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
+            // Redirection vers index.html
             window.location.href = 'index.html';
         }
 
@@ -44,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Email:', emailInput.value);
         console.log('Message:', messageInput.value);
 
-        console.log('Validation du nom:', isNomValid);
-        console.log('Validation de l\'e-mail:', isEmailValid);
-        console.log('Validation du message:', isMessageValid);
+        console.log('Validation du nom:', ValidNom(nomInput.value));
+        console.log('Validation de l\'e-mail:', ValidEmail(emailInput.value));
+        console.log('Validation du message:', ValidMessage(messageInput.value));
     });
 
     function ValidNom(nom) {
