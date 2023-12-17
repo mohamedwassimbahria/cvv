@@ -69,3 +69,7 @@ footer {
     padding: 10px;
     text-align: center;
 }
+#nomError, #emailError, #messageError {
+    color: red;
+    font-size: 14px;
+}
