@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
+            event.preventDefault();
             window.location.href = 'index.html';
         }
 
