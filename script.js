@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
-            window.location.href = 'index.html';
+            window.location.href = 'cvv/index.html';
         }
 
         console.log('Nom:', nomInput.value);
