@@ -31,10 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
             messageError.textContent = '';
         }
 
-        // Si la validation est réussie, redirigez vers index.html
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
-            // Redirection vers index.html
-            window.location.href = 'cvv/index.html';
+            window.location.href = 'index.html';
         }
 
         console.log('Nom:', nomInput.value);
