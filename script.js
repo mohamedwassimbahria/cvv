@@ -9,30 +9,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactForm.addEventListener('submit', function (event) {
         console.log('Formulaire soumis.');
-        if (!ValidNom(nomInput.value)) {
+
+        const isNomValid = ValidNom(nomInput.value);
+        if (!isNomValid) {
             event.preventDefault();
             nomError.textContent = 'Veuillez saisir un nom valide (lettres seulement)';
         } else {
             nomError.textContent = '';
         }
 
-        if (!ValidEmail(emailInput.value)) {
+        // Validation du champ de saisie de l'e-mail
+        const isEmailValid = ValidEmail(emailInput.value);
+        if (!isEmailValid) {
             event.preventDefault();
             emailError.textContent = 'Veuillez saisir une adresse e-mail valide';
         } else {
             emailError.textContent = '';
         }
 
-        if (!ValidMessage(messageInput.value)) {
+        // Validation du champ de saisie du message
+        const isMessageValid = ValidMessage(messageInput.value);
+        if (!isMessageValid) {
             event.preventDefault();
             messageError.textContent = 'Veuillez saisir un message';
         } else {
             messageError.textContent = '';
         }
 
-        if (isValidForm()) {
+        if (isNomValid && isEmailValid && isMessageValid) {
             window.location.href = 'index.html';
         }
+
+        console.log('Nom:', nomInput.value);
+        console.log('Email:', emailInput.value);
+        console.log('Message:', messageInput.value);
+
+        console.log('Validation du nom:', isNomValid);
+        console.log('Validation de l\'e-mail:', isEmailValid);
+        console.log('Validation du message:', isMessageValid);
     });
 
     function ValidNom(nom) {
@@ -48,12 +62,4 @@ document.addEventListener('DOMContentLoaded', function () {
     function ValidMessage(message) {
         return message.trim() !== '';
     }
-
-    function isValidForm() {
-        return ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value);
-    }
 });
-
-
-
-
