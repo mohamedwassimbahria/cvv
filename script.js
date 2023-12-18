@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             messageError.textContent = '';
         }
 
-
         console.log('Nom:', nomInput.value);
         console.log('Email:', emailInput.value);
         console.log('Message:', messageInput.value);
