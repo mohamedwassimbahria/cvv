@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             messageError.textContent = '';
         }
 
-        if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
-            console.log("Conditions vérifiées");
-            window.location.href = 'index.html';
-        }
 
         console.log('Nom:', nomInput.value);
         console.log('Email:', emailInput.value);
