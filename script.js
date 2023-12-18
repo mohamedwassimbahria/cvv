@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const nomError = document.getElementById('nomError');
     const emailError = document.getElementById('emailError');
     const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('successMessage'); // Add this line
 
     contactForm.addEventListener('submit', function (event) {
         console.log('Formulaire soumis.');
+
+        // Validation logic
         if (!ValidNom(nomInput.value)) {
             event.preventDefault();
             nomError.textContent = 'Veuillez saisir un nom valide (lettres seulement)';
@@ -28,6 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
             messageError.textContent = 'Veuillez saisir un message';
         } else {
             messageError.textContent = '';
+        }
+
+        // Check if all fields are valid before showing success message
+        if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
+            successMessage.textContent = 'Votre formulaire a été soumis avec succès!';
+        } else {
+            successMessage.textContent = ''; // Clear the success message if there are validation errors
         }
 
         console.log('Nom:', nomInput.value);
