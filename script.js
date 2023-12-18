@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             messageError.textContent = '';
         }
-
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
             // Redirection vers la page d'accueil après la soumission du formulaire
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         }
+
 
         console.log('Nom:', nomInput.value);
         console.log('Email:', emailInput.value);
