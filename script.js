@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
             // Redirection vers la page d'accueil après la soumission du formulaire
-            window.location.href = 'https://mohamedwassimbahria.github.io/cvv/index.html';
-        }
+            window.location.href = 'file:///C:/Users/BAZINFO/Desktop/cvv/index.html';
+        
 
 
         console.log('Nom:', nomInput.value);
