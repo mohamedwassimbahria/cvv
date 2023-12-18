@@ -73,3 +73,7 @@ footer {
     color: red;
     font-size: 14px;
 }
+#successMessage {
+    color: green;
+    font-weight: bold;
+}

@@ -35,9 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Check if all fields are valid before showing success message
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
+            console.log('Success message:', successMessage.textContent);
             successMessage.textContent = 'Votre formulaire a été soumis avec succès!';
         } else {
-            successMessage.textContent = ''; // Clear the success message if there are validation errors
+            successMessage.textContent = '';
         }
 
         console.log('Nom:', nomInput.value);
