@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
             // Redirection vers la page d'accueil après la soumission du formulaire
-            window.location.href = '/Users/BAZINFO/Desktop/cvv/index.html';
+            window.location.href = 'index.html';
         }
 
 
