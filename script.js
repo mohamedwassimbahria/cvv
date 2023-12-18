@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (ValidNom(nomInput.value) && ValidEmail(emailInput.value) && ValidMessage(messageInput.value)) {
             console.log('Success message:', successMessage.textContent);
             successMessage.textContent = 'Votre formulaire a été soumis avec succès!';
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 2000);
         } else {
             successMessage.textContent = '';
         }
